@@ -20,10 +20,15 @@ function App() {
           // .catch(() => {
           //   console.log("실패함 ㅅㄱ");
           // });
-          // axios.post("http://52.79.81.200:8080/v1/login", {
-          //   email: "utest@gmail.com",
-          //   password: "1234aAcd!",
-          // }); 요거는 왜 401 에러 발생하지..
+          axios
+            .post("http://52.79.81.200:8080/v1/login", {
+              email: "utest@gmail.com",
+              password: "1234aAcd!!",
+            })
+            .then((결과) => {
+              console.log(결과.data);
+            });
+          // 요거는 왜 401 에러 발생하지..
         }}
       >
         버튼
